@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { LogoApComponent } from './logo-ap/logo-ap.component';
-import { BannerComponent } from './banner/banner.component';
-import { AcercaDeComponent } from './acerca-de/acerca-de.component';
-import { SocialComponent } from './social/social.component';
-import { FotoPerfilComponent } from './foto-perfil/foto-perfil.component';
-import { ExperienciaComponent } from './experiencia/experiencia.component';
-import { EducacionComponent } from './educacion/educacion.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LogoApComponent } from './components/logo-ap/logo-ap.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { SocialComponent } from './components/social/social.component';
+import { FotoPerfilComponent } from './components/foto-perfil/foto-perfil.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import { HysComponent } from './hys/hys.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProyectosComponent } from './proyectos/proyectos.component';
+import { HysComponent } from './components/hys/hys.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
