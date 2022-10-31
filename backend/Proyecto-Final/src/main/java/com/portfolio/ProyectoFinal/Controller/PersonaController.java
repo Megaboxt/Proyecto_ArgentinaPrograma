@@ -26,21 +26,21 @@ public class PersonaController {
         return ipersonService.getPersona();
     }
     
-    @PreAuthorize("hasRole(ADMIN)")
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonService.savePersona(persona);
                 return "La persona fue creada correctamente";
     }
     
-    @PreAuthorize("hasRole(ADMIN)")
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/personas/borrar/(id)")
     public String deletePersona(@PathVariable Long id){
         ipersonService.deletePersona(id);
         return "La persona fue eliminada correctamente";
     }
     
-    @PreAuthorize("hasRole(ADMIN)")
+    @PreAuthorize("hasRole('ADMIN')")
     // URL: PUERTO/personas/editar/4/nombre & apellido & img
     @PutMapping("/personas/editar/(id)")
     public Persona editPersona(@PathVariable Long id,

@@ -10,7 +10,7 @@ import { Experiencia } from './experiencia';
 })
 export class SExperienciaService {
 
-  expURL = 'http://localhost:8080/explab'
+  expURL = '/explab/';  // http://localhost:8080
 
   constructor(private httpClient: HttpClient) { }
 
